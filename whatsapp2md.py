@@ -64,6 +64,7 @@ def parse_timestamp(line: str) -> Tuple[Optional[datetime], str]:
     :return: a tuple with the timestamp (if any) and the rest of the line.
     """
     datetime_formats = [
+        '%#m/%#d/%y, %#I:%M\u00A0%p ',
         '%d/%m/%y %H:%M ',
         '%d/%m/%y, %H:%M ',
         '%d/%m/%Y, %H:%M ',
