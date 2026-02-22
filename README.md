@@ -56,6 +56,16 @@ optional arguments:
   --hide-timestamp  Hides message timestamps
 ```
 
+## How to run in Windows Powershell
+
+```powershell
+# Note: param -X utf8 is needed as the Chat export file contains &nbsp;(\u00A) and other unicode characters. Since Poweshell by default does not handle output as unicode, this param is needed to avoid exception:
+    # "UnicodeEncodeError: 'charmap' codec can't encode characters"
+
+python -X utf8 .\whatsapp2md.py chat.txt --show-sender > chat.md 
+
+```
+
 # FAQ
 
 ### Why my markdown file does not show my images?
